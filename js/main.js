@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         let formStatus = 'success';
 
-        if ($('#tabela-produtos tbody tr').length === 0) {
+        if ($('#produtos-container .produto-item').length === 0) {
             alert('Por favor, adicione pelo menos um produto.');
             formStatus = 'failure';
         }
@@ -40,7 +40,7 @@ $(document).ready(function() {
             anexos: []
         };
 
-        $('#tabela-produtos tbody tr').each(function() {
+        $('#produtos-container .produto-item').each(function() {
             var produto = {
                 descricao: $(this).find('.descricao').val(),
                 unidadeMedida: $(this).find('.unidade-medida').val(),
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
             if (formStatus === 'success') {
                 $('#fornecedor-form')[0].reset();
-                $('#tabela-produtos tbody').empty();
+                $('#produtos-container').empty();
                 AnexosWidget.reset();
             }
 

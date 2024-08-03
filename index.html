@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Fornecedor</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/fluig-style-guide/dist/fluig.min.css">
+    <link rel="stylesheet" href="node_modules/@fluig/fluig-style-guide/dist/fluig.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Cadastro Fornecedor/Produto</h1>
-        <form id="fornecedor-form">
-            <div id="fornecedor-container"></div>
-            <div id="produtos-container"></div>
-            <div id="anexos-container"></div>
-            <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
-        </form>
-    </div>
 
-    <div id="modal-placeholder"></div>
+    <main>
+    <div class="container">
+        <h2 class="text-center">CADASTRO FORNECEDOR/PRODUTO</h2>
+        
+                <form id="fornecedor-form">
+
+                    <div id="fornecedor-container" class="card"></div>
+                    
+                    <div id="produtos-container" class="card"></div>
+
+                    <div id="anexos-container" class="card"></div>
+
+                    
+                    <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
+                </form>
+            </div>
+            <div id="modal-placeholder" class="card"></div>
+</main>
+
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
     <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/fluig-style-guide/dist/fluig.min.js"></script>
+    <script src="node_modules/@fluig/fluig-style-guide/dist/fluig.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
     <script src="js/fornecedor.js"></script>
     <script src="js/produtos.js"></script>
     <script src="js/anexos.js"></script>
     <script src="js/init.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#modal-placeholder").load("modal.html");
         });
     </script>
 </body>
-
 </html>
