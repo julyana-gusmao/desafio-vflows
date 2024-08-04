@@ -11,6 +11,8 @@ var FornecedorWidget = {
     }
 };
 
+window.FornecedorWidget = FornecedorWidget;
+
 $(document).ready(function() {
     FornecedorWidget.init();
 });

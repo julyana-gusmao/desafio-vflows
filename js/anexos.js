@@ -2,12 +2,12 @@ var AnexosWidget = {
     anexos: {},
 
     init: function() {
-        $('#adicionar-anexo').on('click', function() {
+        $('#adicionar-anexo').off("click").on('click', function() {
             $('#input-anexo').click();
             $('#anexos-content').show(); 
         });
 
-        $('#input-anexo').on('change', function() {
+        $('#input-anexo').off("change").on('change', function() {
             AnexosWidget.adicionarAnexo();
         });
     },
@@ -80,6 +80,8 @@ var AnexosWidget = {
         $('#anexos-content').hide();
     }
 };
+
+window.AnexosWidget = AnexosWidget;
 
 $(document).ready(function() {
     AnexosWidget.init();

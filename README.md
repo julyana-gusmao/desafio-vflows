@@ -15,3 +15,7 @@ Conta com formulário, renderização condicional e verificações.
 - Componentização separada para cada responsabilidade 
 - Estilização separada para facilidade de refatoração
 - Arquitetura pensada em `clean code` e `easy readying`
+
+#### 🎈 Comentário pessoal sobre o projeto:
+Segui o layout proposto pelo desafio, porém realizando algumas melhorias para aprimorar a experiência do usuário. <br/>
+Apliquei máscaras de input e organizei o padding para garantir uma apresentação visualmente mais agradável e harmoniosa.
