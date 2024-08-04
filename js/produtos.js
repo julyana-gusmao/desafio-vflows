@@ -19,8 +19,8 @@ var ProdutosWidget = {
       
       var produtoHtml = `
         <div class="produto-item" id="produto-${this.produtoIndex}">
-            <button class="btn-remover-produto" data-index="${this.produtoIndex}">
-                <div class="btn-remover-produto-style">   
+            <button class="btn-excluir" data-index="${this.produtoIndex}">
+                <div class="btn-excluir-style">   
                     <img src="./img/trash.png" alt="Trash Icon">
                 </div>
             </button>
@@ -70,7 +70,7 @@ var ProdutosWidget = {
       $(produtoHtml).insertBefore("#adicionar-produto");
       $(`#produto-${this.produtoIndex} .quantidade, #produto-${this.produtoIndex} .valor-unitario`)
         .on("input", this.updateProductTotal.bind(this, this.produtoIndex));
-      $(`#produto-${this.produtoIndex} .btn-remover-produto`)
+      $(`#produto-${this.produtoIndex} .btn-excluir`)
         .on("click", this.removeProduct.bind(this));
     },
   
@@ -92,7 +92,7 @@ var ProdutosWidget = {
         var newIndex = index + 1;
         $(element).attr("id", `produto-${newIndex}`);
         $(element).find(".produto-title").text(`Produto ${newIndex}`);
-        $(element).find(".btn-remover-produto").data("index", newIndex);
+        $(element).find(".btn-excluir").data("index", newIndex);
         $(element).find(".quantidade, .valor-unitario")
           .off("input")
           .on("input", function () {

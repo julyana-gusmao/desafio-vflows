@@ -4,6 +4,7 @@ var AnexosWidget = {
     init: function() {
         $('#adicionar-anexo').on('click', function() {
             $('#input-anexo').click();
+            $('#anexos-content').show(); 
         });
 
         $('#input-anexo').on('change', function() {
@@ -22,20 +23,27 @@ var AnexosWidget = {
             this.anexos[fileId] = file;
 
             var anexoHtml = `
-                <tr id="${fileId}">
-                    <td>${file.name}</td>
-                    <td>
-                        <button type="button" class="btn btn-primary btn-visualizar" data-file-id="${fileId}">Visualizar</button>
-                        <button type="button" class="btn btn-danger btn-excluir" data-file-id="${fileId}">Excluir</button>
-                    </td>
-                </tr>
+                <div id="${fileId}" class="anexo-item">
+                  <button type="button" class="btn-excluir" data-file-id="${fileId}">
+                    <div class="btn-excluir-style">   
+                      <img src="./img/trash.png" alt="Trash Icon">
+                    </div>
+                  </button>
+                  <button type="button" class="btn-visualizar" data-file-id="${fileId}">
+                    <div class="btn-visualizar-style">   
+                      <img src="./img/view.png" alt="Visualizar">
+                    </div>
+                  </button>
+                    <span class="anexo-nome">${file.name}</span>
+                </div>
             `;
 
-            $('#tabela-anexos tbody').append(anexoHtml);
+            $('#anexos-content').append(anexoHtml);
 
             fileInput.value = '';
 
-            $(`#${fileId} .btn-visualizar`).on('click', function() {
+            $(`#${fileId} .btn-visualizar`).on('click', function(event) {
+                event.preventDefault();
                 AnexosWidget.visualizarAnexo($(this).data('file-id'));
             });
 
@@ -60,11 +68,16 @@ var AnexosWidget = {
     excluirAnexo: function(fileId) {
         delete this.anexos[fileId];
         $(`#${fileId}`).remove();
+
+        if (Object.keys(this.anexos).length === 0) {
+            $('#anexos-content').hide();
+        }
     },
 
     reset: function() {
         this.anexos = {};
-        $('#tabela-anexos tbody').empty();
+        $('#anexos-content').empty();
+        $('#anexos-content').hide();
     }
 };
 

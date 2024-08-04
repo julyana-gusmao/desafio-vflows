@@ -78,19 +78,19 @@ h2, h6, label {
     width: 100%;
 }
 
-.btn-remover-produto {
+.btn-excluir {
     background: red;
     border: solid 1px black;
     cursor: pointer;
     padding: 2px;
 }
 
-.btn-remover-produto-style {
+.btn-excluir-style {
     width: 30px;
     height: 30px;
 }
 
-.btn-remover-produto-style img {
+.btn-excluir-style img {
     width: 100%;
     height: 100%;
 }
@@ -184,4 +184,36 @@ h2, h6, label {
 
 .produtos-bottom .form-group {
     flex-grow: 1;
+}
+
+
+.anexo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.anexo-nome {
+    flex-grow: 1;
+}
+
+.btn-visualizar img,
+.btn-excluir img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-visualizar {
+    background: #0085B2;
+    cursor: pointer;
+    size: 30px;
+    border: none;
+}
+
+.btn-visualizar-style {
+    width: 30px;
+    height: 30px;
 }
