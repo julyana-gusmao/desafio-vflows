@@ -4,38 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Fornecedor</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fluig/fluig-style-guide/dist/fluig.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fluig.totvs.com/style-guide/css/fluig-style-guide.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/arquivos.css">
+    <link rel="stylesheet" href="css/cards.css">
 </head>
 <body>
 
     <main>
-    <div class="container">
-        <h2 class="text-center">CADASTRO FORNECEDOR/PRODUTO</h2>
-        
-                <form id="fornecedor-form">
+        <div class="container">
+            <h2 class="text-center">CADASTRO FORNECEDOR/PRODUTO</h2>
+            <form id="fornecedor-form">
+                <div id="fornecedor-container" class="card"></div>
+                <div id="produtos-container" class="card"></div>
+                <div id="anexos-container" class="card"></div>
+                <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
+            </form>
+        </div>
+        <div id="modal-placeholder" class="card"></div>
+    </main>
 
-                    <div id="fornecedor-container" class="card"></div>
-                    
-                    <div id="produtos-container" class="card"></div>
-
-                    <div id="anexos-container" class="card"></div>
-
-                    
-                    <button type="submit" class="btn btn-success">Salvar Fornecedor</button>
-                </form>
-            </div>
-            <div id="modal-placeholder" class="card"></div>
-</main>
-
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
-    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/@fluig/fluig-style-guide/dist/fluig.min.js"></script>
-    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://fluig.totvs.com/style-guide/js/fluig-style-guide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
     <script src="js/fornecedor.js"></script>
     <script src="js/produtos.js"></script>
     <script src="js/anexos.js"></script>

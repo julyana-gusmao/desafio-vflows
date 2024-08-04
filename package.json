@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.3.3",
-    "jquery": "^3.7.1",
-    "jquery-mask-plugin": "^1.14.16",
-    "jquery-ui": "^1.13.3",
-    "mustache": "^4.2.0"
-  }
-}

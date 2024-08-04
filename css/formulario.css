@@ -1,0 +1,45 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: full;
+}
+
+.input-small {
+    width: 10vw;
+}
+
+.input-full {
+    width: full;
+}
+
+.input-medium {
+    width: 17vw;
+}
+
+.input-large {
+    width: 28vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+
+.select-und {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 8vw;
+}
+
+.produtos-bottom .form-group input[type="number"],
+.produtos-bottom .form-group input[type="text"] {
+    width: calc(20vw - 8vw);
+}
+
+.produtos-bottom .form-group {
+    flex-grow: 1;
+}

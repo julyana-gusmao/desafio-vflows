@@ -1,0 +1,12 @@
+.anexo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.anexo-nome {
+    flex-grow: 1;
+}

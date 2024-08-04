@@ -64,7 +64,11 @@ $(document).ready(function() {
 
         setTimeout(function() {
             console.log("Dados do Fornecedor:", JSON.stringify(fornecedorData, null, 2));
-            $('#loadingModal .modal-body').html('<div class="text-center"><p>Sucesso!</p></div>');
+            $('#loadingModal .modal-body').html(`
+                <div class="text-center">
+                  <img src="./img/check.png" alt="success" style="margin-bottom: 15px;">
+                  <p>Sucesso!</p>
+                </div>`);
 
             if (formStatus === 'success') {
                 $('#fornecedor-form')[0].reset();
