@@ -70,6 +70,10 @@ $(document).ready(function() {
                 $('#fornecedor-form')[0].reset();
                 $('#produtos-container').empty();
                 AnexosWidget.reset();
+
+                $('#produtos-container').load('components/produtos.html', function() {
+                    ProdutosWidget.init();
+                });
             }
 
             setTimeout(function() {

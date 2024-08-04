@@ -75,7 +75,7 @@ h2, h6, label {
 } 
 
 .btn {
-    width: full;
+    width: 100%;
 }
 
 .btn-remover-produto {
@@ -141,7 +141,7 @@ h2, h6, label {
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0px;
 }
 
 .produto-imagem {
